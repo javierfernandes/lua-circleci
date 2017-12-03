@@ -7,4 +7,6 @@ jobs:
     steps:
       - checkout
       - run: luarocks install busted
+      - run: luarocks path --bin
+      - run: ls -l .
       - run: busted -- specs/
