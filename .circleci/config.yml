@@ -3,10 +3,9 @@ jobs:
   build:
     docker:
       - image: quay.io/3scale/s2i-openresty-centos7:luarocks-build
-#    working_directory: /opt/app-root/lua-resty-url
     steps:
       - checkout
       - run: luarocks install busted
       - run: luarocks path --bin
       - run: ls -l .
-      - run: bin/busted -C ./src -- ../specs/
+      - run: bin/busted
