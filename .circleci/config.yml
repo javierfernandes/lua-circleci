@@ -9,4 +9,4 @@ jobs:
       - run: luarocks install busted
       - run: luarocks path --bin
       - run: ls -l .
-      - run: bin/busted -- specs/
+      - run: bin/busted -C ./src -- ../specs/
